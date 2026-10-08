@@ -1,0 +1,242 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    margin: 0 0 0.5rem 0;
+}
+
+header p {
+    margin: 0;
+    color: #ecf0f1;
+}
+
+main {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+/* Flexbox Form */
+#note-form {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+}
+
+label {
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus, select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+button {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    height: 42px;
+}
+
+button:hover {
+    background-color: #34495e;
+}
+
+.secondary-btn {
+    background-color: #e74c3c;
+}
+
+.secondary-btn:hover {
+    background-color: #c0392b;
+}
+
+#error-message {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.toolbar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#search-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#note-count {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Notes List & Cards */
+#notes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.note-card {
+    background: #ffffff;
+    padding: 1rem;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #ccc;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.note-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.note-text {
+    word-break: break-word;
+}
+
+.note-meta {
+    font-size: 0.8rem;
+    color: #666;
+    display: flex;
+    gap: 10px;
+}
+
+.category-badge {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+/* Category Left-Border & Badge Styles */
+.category-personal {
+    border-left-color: #008080; /* Teal */
+}
+.category-personal .category-badge {
+    color: #008080;
+}
+
+.category-work {
+    border-left-color: #8b0000; /* Dark Red */
+}
+.category-work .category-badge {
+    color: #8b0000;
+}
+
+.category-study {
+    border-left-color: #0000ff; /* Blue */
+}
+.category-study .category-badge {
+    color: #0000ff;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    height: auto;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #2c3e50;
+    color: #ffffff;
+    margin-top: 2rem;
+}
+
+/* Responsive Media Query */
+@media (max-width: 600px) {
+    #note-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .toolbar {
+        flex-direction: column;
+    }
+
+    .note-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .delete-btn {
+        align-self: flex-end;
+    }
+}
