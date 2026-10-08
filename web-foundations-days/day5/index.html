@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Directory</title>
+    <link rel="stylesheet" href="style.css"> <!-- Optional/shared styles if applicable -->
+    <script src="users.js" defer></script>
+</head>
+<body>
+    <main style="max-width: 700px; margin: 2rem auto; font-family: Arial, sans-serif; padding: 0 1rem;">
+        <h1>User Directory</h1>
+        
+        <div style="margin-bottom: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+            <button id="load-users">Load Users</button>
+            <div style="flex: 1; min-width: 200px;">
+                <label for="filter-input" style="display: block; margin-bottom: 0.3rem; font-weight: bold;">Filter by name:</label>
+                <input type="text" id="filter-input" placeholder="Type a name to filter..." style="width: 100%; padding: 8px; box-sizing: border-box;">
+            </div>
+        </div>
+
+        <p id="status" style="font-weight: bold; color: #555;"></p>
+        <ul id="users-list" style="list-style: none; padding: 0;"></ul>
+    </main>
+</body>
+</html>
