@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickNotes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>QuickNotes</h1>
+        <p>Your fast, organized, and secure web note-taking companion.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Add a note</h2>
+            <form id="note-form">
+                <div class="form-control">
+                    <label for="note-input">Note text:</label>
+                    <input type="text" id="note-input" placeholder="What's on your mind?">
+                </div>
+                <div class="form-control">
+                    <label for="note-category">Category:</label>
+                    <select id="note-category">
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="study">Study</option>
+                    </select>
+                </div>
+                <button type="submit">Add Note</button>
+            </form>
+            <p id="error-message"></p>
+        </section>
+
+        <section>
+            <h2>Your notes</h2>
+            <div class="toolbar">
+                <input type="text" id="search-input" placeholder="Search notes...">
+                <button id="clear-all-btn" class="secondary-btn">Clear All</button>
+            </div>
+            <p id="note-count">You have no notes yet.</p>
+            <ul id="notes-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 QuickNotes App</p>
+    </footer>
+</body>
+</html>
