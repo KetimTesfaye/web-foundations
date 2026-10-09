@@ -12,9 +12,9 @@ SnapShare Scaling Architecture Plan
 Traffic Calculations
 
 - Total Uploads Per Day: $1,000,000 \text{ photos/day}$
-- \Uploads Per Second (Average):
+- Uploads Per Second (Average):
   \frac{1,000,000}{86,400 \text{ seconds}} \approx 11.57 \text{ uploads/sec}$$
-- \Feed Views Per Day:\ $1,000,000 \text{ users} \times 50 \text{ views/day} = 50,000,000 \text{ feed views/day}$
+- Feed Views Per Day:\ $1,000,000 \text{ users} \times 50 \text{ views/day} = 50,000,000 \text{ feed views/day}$
 - Feed Views Per Second (Average):
   $\frac{50,000,000}{86,400 \text{ seconds}} \approx 578.7 \text{ views/sec}$$
 - Feed Views Per Second (Peak - 5× factor):
